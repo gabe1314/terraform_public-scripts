@@ -2,6 +2,17 @@ This repo is creating a PowerShell scrip to Automate the Terraform process.
 
 Currently I'm having an issue with the process locking the terraform.tfstate file which is only happening in Windows. In Mac and Ubunut I can usually use a -lock=false but in Windows this command is not working and will not unlock the process. 
 
+
+
+Terraform Init |
+        |
+        --> Terraform Plan 
+                  |
+                  |
+                  -->-- Terraform Apply 
+
+
+
 The Fix I found for this manually is to run the following:
 
 Stop-Process -Name terraform
