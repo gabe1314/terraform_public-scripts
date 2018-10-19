@@ -50,6 +50,7 @@ Terraform Init ->(Has Error in Log)
                                                                               -->-- Terraform Apply 
 
 
+____________________________________________________________________
 
 Please help to contribute to this script and I thank you in advance. 
 ____________________________________________________________________
