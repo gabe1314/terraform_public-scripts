@@ -1,4 +1,4 @@
-This repo is creating a PowerShell scrip to Automate the Terraform process. 
+This repo is creating a PowerShell scrip to Automate the Terraform process with a PowerShell Script.  
 
 Currently I'm having an issue with the process locking the terraform.tfstate file which is only happening in Windows. In Mac and Ubunut I can usually use a -lock=false but in Windows this command is not working and will not unlock the process. 
 
