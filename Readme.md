@@ -22,6 +22,53 @@ Once terraform is stopped, I can then run the terraform_Init_and_Plan_ApplyWorki
 The script I'm trying to get working to get working to deal with the below error is Terraform_Automation-Error.ps1. 
 
 
+Workflow for PowerShell Script 
+
+"If" when you run the Terraform init command there is an error that is recorded to the log file in  E:\terraform\logs\terraform_Plan.log 
+
+Terraform needs to be stopped
+
+or "Else"
+
+Run the Terraform init command and continue the Terraform automation process. 
+
+
+If 
+
+Terraform Init ->(Has Error in Log) 
+                                  |
+                                  -> Terraform Stop
+                                                  |
+                                                  -> Else
+                                                        |
+                                                         ->
+                                                           |
+                                                           |
+                                                            --> Terraform Plan 
+                                                                              |
+                                                                              |
+                                                                              -->-- Terraform Apply 
+
+
+
+
+
+
+
+
+E:\terraform\logs\terraform_Plan.log -Tail 3 | Select-String -Pattern "The process cannot access the file because another process has locked" -AllMatches)
+    
+    {
+ Stop-Process -Name terraform
+
+
+
+
+
+
+
+
+
 Please help to contribute to this script and I thank you in advance. 
 
 Error Log
