@@ -1,6 +1,18 @@
 This repo is creating a PowerShell scrip to Automate the Terraform process with a PowerShell Script.  
 
-Currently I've created a script to Automate the Terraform Process and deal with an issue with the process locking the terraform.tfstate file which is only happening in Windows. In Mac and Ubunut I can usually use a -lock=false but in Windows this command is not working and will not unlock the process. 
+Currently I've created a script to Automate the Terraform Process and deal with an issue with the process locking the terraform.tfstate file which is only happening in Windows. 
+
+The script will stop the Terraform process if it's running. 
+
+Next the script will check if the tfstate.* files are in the directory and will delete the previous backups. 
+
+If there is no backup files the Automation will run the following Terraform Commands 
+
+Terraform init
+terraform plan 
+terraform apply 
+
+______________________________________________________________________
 
 
 
